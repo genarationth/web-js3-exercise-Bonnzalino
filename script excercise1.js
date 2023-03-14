@@ -1,10 +1,19 @@
-let cost = Math.floor(Math.random()*1000); //<<<<<<random cost 0-1000 will fixed it later when I have time.
+function getRndCost(min, max) {
+    let cost =  Math.floor(Math.random() * (max - min + 1) ) + min;
+    return cost;
+}
 
-function totalcost(cost) {
-    let intfee = cost * 0.01;     //<<<<<<<< intfee 0.01%
+let rndCost= getRndCost(300, 1000);//<<<<<<random cost 300-1000 will fixed it later when I have time.
+console.log(rndCost);
+
+function totalcost(rndCost) {
+    let intfee = rndCost * 0.01;     //<<<<<<<< intfee 1%
     const fee = 3;                 // fee every transaction 3$
-    total = cost + fee + intfee;
+    total = rndCost + fee + intfee;
     return total;
 }
 
-console.log(`This transaction is ${cost}. if she include $3 fee and 0.01 interest fee, she will pay ${totalcost(cost)}`);
+let payCost = totalcost(rndCost);
+console.log(payCost);
+
+console.log(`Cost in this transaction is ${rndCost}. if she include $3 fee and 0.01 interest fee, she will pay ${totalcost(rndCost)}`);
