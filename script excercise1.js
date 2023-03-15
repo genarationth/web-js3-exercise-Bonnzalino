@@ -3,7 +3,7 @@ function getRndCost(min, max) {
     return cost;
 }
 
-let rndCost= getRndCost(300, 1000);//<<<<<<random cost 300-1000 will fixed it later when I have time.
+let rndCost= getRndCost(300, 1000);//<<<<<<random cost 300-1000 
 console.log(rndCost);
 
 function totalcost(rndCost) {
@@ -16,4 +16,4 @@ function totalcost(rndCost) {
 let payCost = totalcost(rndCost);
 console.log(payCost);
 
-console.log(`Cost in this transaction is ${rndCost}. if she include $3 fee and 0.01 interest fee, she will pay ${totalcost(rndCost)}`);
+console.log(`Cost in this transaction is ${rndCost}. if she include $3 fee and 0.01 interest fee, she will pay ${payCost}`);
